@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  letter-spacing: .5px;
+  outline: none!important;
+}
+body {
+  font: 14px 'Open Sans', Arial, sans-serif;
+  height: 100vh;
+  min-width: 425px;
+  background: #333 url(bg.jpg);
+}
+a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+button {
+  cursor: pointer;
+}
+button, input, textarea, label {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  resize: none;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  &:focus {
+    border-color: #666;
+  }
+}
+.fa {
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+}
+.react-confirm-alert-overlay {
+  background: rgba(#000, .3);
+  align-items: flex-start;
+  padding-top: 75px;
+}
+.react-confirm-alert {
+  padding: 15px;
+  border-radius: 5px;
+}
+.react-confirm-alert-button-group > button {
+  height: 38px;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    opacity: .8;
+  }
+  &:last-child {
+    background-color: #872329;
+  }
+}
+.react-confirm-alert > h1 {
+  font-size: 25px;
+  text-align: center;
+}
+.button {
+  float: right;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  &--add {
+    background: #3c8925;
+  }
+  &--delete {
+    background: #872329;
+  }
+  &--order {
+    background: #3c3ba3;
+  }
+  &--edit {
+    background: #ce972e;
+  }
+  &:hover {
+    opacity: .8;
+  }
+}
+.content {
+  padding: 40px 40px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 40px 0;
+  }
+}

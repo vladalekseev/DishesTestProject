@@ -1,0 +1,4 @@
+<div class="menu">
+  <h2 class="menu__title">Menu</h2>
+  <app-menu-item *ngFor="let dish of dishes" [dish]="dish" (dishAdded)="addToOrder($event)"></app-menu-item>
+</div>

@@ -1,0 +1,25 @@
+<div class="header">
+  <div class="header__wrapper container-fluid">
+    <i class="fa fa-bars header__sandwich"></i>
+    <h1 class="header__title">DataArt <span class="header__branch">Food</span></h1>
+    <div class="header__status">
+      <div class="header__auth">
+        <div class="header__profile d-none">Dashboard</div>
+        <div class="header__name d-none">
+          <i class="fa fa-user header__user-icon"></i>
+        </div>
+        <div class="header__log-out d-none">
+          <i class="fa fa-sign-out header__out-icon"></i>
+          <span class="header__out">Log out</span>
+        </div>
+        <div class="header__auth">
+          <app-login-form *ngIf="isLoginFormOpened"></app-login-form>
+          <div class="header__log-in" (click)="toggleLoginForm()">Log in</div>
+          <div class="header__divider">/</div>
+          <div class="header__log-in" (click)="toggleSignUpForm()">Sign up</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-signup-form *ngIf="isSignUpFormOpened" (formClosed)="toggleSignUpForm()"></app-signup-form>
+</div>

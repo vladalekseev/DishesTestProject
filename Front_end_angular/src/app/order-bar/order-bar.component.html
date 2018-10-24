@@ -1,0 +1,15 @@
+<div class="order__wrapper">
+  <div class="order__container clearfix">
+    <h4 class="order__title">Order</h4>
+    <app-current-order
+      *ngFor="let orderEl of currentOrders"
+      [order]="orderEl"
+      (dishRemoved)="manageOrder('remove', $event.id)"
+      (dishIncreased)="manageOrder('increase', $event.id)"
+      (dishReduced)="manageOrder('reduce', $event.id)"
+    >
+    </app-current-order>
+    <button type="button" class="button button--order" *ngIf="currentOrders.length > 0" (click)="orderDishes()">order</button>
+    <div class="order__empty" *ngIf="currentOrders.length === 0">Your order list is empty, add dishes to your order</div>
+  </div>
+</div>

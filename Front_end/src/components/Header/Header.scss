@@ -1,0 +1,114 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: url(http://thepatternlibrary.com/img/h.jpg);
+  box-shadow: 2px 0 3px #000;
+  &__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 20px;
+  }
+  &__sandwich {
+    display: none;
+  }
+  &__title {
+    margin: 0 auto 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  &__branch {
+    color: #a49ba9;
+  }
+  &__status {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__auth {
+    display: flex;
+    align-items: center;
+  }
+  &__log-in {
+    font-weight: bold;
+    padding: 0 15px;
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+  &__profile {
+    margin-right: 20px;
+    padding: 0 10px;
+    line-height: 60px;
+    height: 100%;
+    font-weight: bold;
+    transition: color .3s, background .3s;
+    cursor: pointer;
+    &:hover {
+      color: #333;
+      background: #e5e5e5;
+    }
+  }
+  &__log-out {
+    margin-left: 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    color: #ddd;
+    &:hover {
+      opacity: .7;
+    }
+  }
+  &__name {
+    padding: 0 15px;
+  }
+  &__divider {
+    font-size: 26px;
+  }
+  &__user-icon, &__out-icon {
+    padding-right: 7px;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    &__sandwich {
+      display: block;
+    }  
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    &__title {
+      font-size: 20px;
+    }
+    &__name {
+      margin: 0 5px;
+      padding: 0;
+    }
+    &__status {
+      font-size: 16px;
+    }
+    &__profile {
+      margin-right: 5px;
+      font-size: 16px;
+    }
+    &__log-out {
+      margin-right: 0;
+      font-size: 15px;
+    }
+    &__out {
+      display: none;
+    }
+    &__out-icon {
+      padding-right: 0;
+      padding-left: 5px;
+      font-size: 18px;
+    }
+  }
+}

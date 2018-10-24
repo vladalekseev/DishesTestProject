@@ -1,0 +1,29 @@
+<div class="signup">
+<form class="signup__form">
+<h4 class="signup__header">Sign Up</h4>
+<p class="signup__description">Please sign up with existing account</p>
+<div class="signup__create-new">or create a new one</div>
+<input
+  type="text"
+  class="signup__input"
+  placeholder="Login"
+/>
+<select class="signup__select">
+  <option value="kharkiv">Kharkiv</option>
+  <option value="kyiv">Kyiv</option>
+  <option value="odessa">Odessa</option>
+</select>
+<input
+  type="password"
+  class="signup__input"
+  placeholder="Password"
+/>
+<input
+  type="password"
+  class="signup__input"
+  placeholder="Confirm Password"
+/>
+<button type="submit" class="signup__btn">Sign up</button>
+  <i class="fa fa-times signup__exit" (click)="closeForm()"></i>
+</form>
+</div>

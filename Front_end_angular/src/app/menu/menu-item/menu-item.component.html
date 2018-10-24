@@ -1,0 +1,69 @@
+<div class="menu-item">
+  <div class="menu-item__publish-wrapper" *ngIf="isAdmin">
+    <div class="menu-item__publish-tooltip">
+      Publish dish
+    </div>
+    <i class="fa fa-lock menu-item__check-mark"></i>
+  </div>
+  <div class="menu-item__img-wrapper">
+    <img
+      src="{{dish.img}}"
+      class="menu-item__img"
+      alt="alt"
+    />
+    <label class="menu-item__file-wrapper" *ngIf="isEditable && isAdmin">
+      <input
+        type="file"
+        class="menu-item__img-file"
+      />
+      <span class="menu-item__change-span">Change Photo</span>
+    </label>
+  </div>
+  <div class="menu-item__about">
+    <div class="menu-item__info-container" *ngIf="isEditable && isAdmin">
+      <input
+        class="menu-item__edit-name"
+        type="text"
+        value="{{dish.name}}"
+        placeholder="name"
+      />
+      <textarea
+        class="menu-item__edit-description"
+        placeholder="description">
+          {{dish.description}}
+      </textarea>
+    </div>
+    <div class="menu-item__info-container" *ngIf="!isEditable || !isAdmin">
+      <strong class="menu-item__name">{{dish.name}}</strong>
+      <p class="menu-item__description">{{dish.description}}</p>
+    </div>
+    <button
+      class="button button--add menu-item__btn"
+      (click)="addToOrder()"
+      *ngIf="!isAdmin">
+        add
+    </button>
+    <div class="menu-item__btn-set clearfix">
+      <div *ngIf="isEditable && isAdmin">
+        <button
+          class="button button--delete menu-item__btn">
+            cancel
+        </button>
+        <button
+          class="button button--add menu-item__btn">
+            save
+        </button>
+      </div>
+      <div *ngIf="!isEditable && isAdmin">
+        <button
+          class="button button--delete menu-item__btn">
+        remove
+        </button>
+        <button
+          class="button button--edit menu-item__btn">
+        edit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

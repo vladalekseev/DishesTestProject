@@ -1,0 +1,52 @@
+.menu {
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 40%;
+      background-color: #ccc;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      left: 60%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 40%;
+      background-color: #ccc;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .menu__title {
+    &::after {
+      width: 42%;
+      left: 58%;
+    }
+    &::before {
+      width: 42%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu__title {
+    &::after {
+      width: 35%;
+      left: 65%;
+    }
+    &::before {
+      width: 35%;
+    }
+  }
+}

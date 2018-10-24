@@ -1,0 +1,15 @@
+<div class="order-item">
+  <div class="order-item__img-wrapper">
+    <img src="{{order.img}}" class="order-item__img" alt="alt"/>
+  </div>
+  <p class="order-item__description">{{order.description}}</p>
+  <strong class="order-item__name">{{order.name}}</strong>
+  <i class="fa fa-times order-item__remove-btn" (click)="removeDish()"></i>
+  <div class="order-item_quantity-wrapper">
+    <i class="fa fa-minus order-item_quantity-minus" (click)="reduceDish()"></i>
+    <div class="order-item_quantity">
+      {{order.quantity}}
+    </div>
+    <i class="fa fa-plus order-item_quantity-plus" (click)="increaseDish()"></i>
+  </div>
+</div>
